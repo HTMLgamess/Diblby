@@ -400,6 +400,9 @@ overlay.addEventListener('click', e => {
 </script>
 
 <script>
+if (window.top !== window.self) {
+    window.top.location.href = window.location.href;
+}
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particlesArray = [];
